@@ -4,5 +4,5 @@ RUN git clone https://github.com/vert-x3/vertx-examples.git
 RUN export JAVA_HOME=/usr/lib/jvm/default-java && export M2_HOME=/opt/maven && export MAVEN_HOME=/opt/maven && export PATH=${M2_HOME}/bin:${PATH}
 RUN mvn -version
 RUN cd vertx-examples/spring-examples/
-WORKDIR spring-verticle-factory
+WORKDIR ./spring-verticle-factory
 CMD ["mvn compile exec:java@run"]
